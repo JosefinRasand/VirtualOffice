@@ -1,0 +1,173 @@
+﻿<Window x:Class="VirtualOffice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VirtualOffice"
+        mc:Ignorable="d"
+        Title="Employee Register" Height="360" Width="560">
+    <Grid>
+        <!-- Grid definitions -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <!-- Tools -->
+       
+        <Label
+            Grid.Column="1"
+            Grid.Row="1"
+            Content="First Name:*"
+            HorizontalAlignment="Right"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="2"
+            Content="Last Name:*"
+            HorizontalAlignment="Right"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="3"
+            Content="Age:*"
+            HorizontalAlignment="Right"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="4"
+            Content="Salary:*"
+            HorizontalAlignment="Right"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="5"
+            Content="Biography:"
+            HorizontalAlignment="Right"/>
+        <Label
+            Grid.Column="1"
+            Grid.Row="7"
+            Content="Department*"/>
+        <ComboBox
+            x:Name="cbxYear"
+            Grid.Column="1"
+            Grid.Row="6"
+            Width="80"
+            HorizontalAlignment="Left"/>
+            
+        <ComboBox
+            x:Name="cbxMonth"
+            Grid.Column="2"
+            Grid.Row="6"
+            Width="100"
+            HorizontalAlignment="Left"/>
+        <ComboBox
+            x:Name="cbxDay"
+            Grid.Column="3"
+            Grid.Row="6"
+            Width="50"
+            HorizontalAlignment="Left"/>
+        <ComboBox
+            x:Name="cbxDepartment"
+            Grid.Column="2"
+            Grid.Row="7"
+            Grid.ColumnSpan="2"/>
+        <Button
+            x:Name="btnAdd"
+            Grid.Column="2"
+            Grid.Row="8"
+            Content="Add"
+            Margin="3"
+            Click="btnAdd_Click"/>
+        <TextBox
+            x:Name="tbxFirstName"
+            Grid.Column="2"
+            Grid.Row="1"
+            Width="100"
+            Height="25"
+            />
+        <TextBox
+            x:Name="tbxLastName"
+            Grid.Column="2"
+            Grid.Row="2"
+            Width="100"
+            Height="25"/>
+        <TextBox
+            x:Name="tbxAge"
+            Grid.Column="2"
+            Grid.Row="3"
+            Width="100"
+            Height="25"/>
+        <TextBox
+            x:Name="tbxSalary"
+            Grid.Column="2"
+            Grid.Row="4"
+            Width="100"
+            Height="25"/>
+        <TextBox
+            x:Name="tbxBiography"
+            Grid.Column="2"
+            Grid.Row="5"
+            Width="100"
+            Height="25"
+            HorizontalAlignment="Left"
+            Grid.ColumnSpan="2"/>
+        <ListView
+            x:Name="lvEmployees"
+            Grid.Column="5"
+            Grid.Row="1"
+            Width="250"
+            Height="200"
+            Grid.RowSpan="6"
+            Grid.ColumnSpan="6"
+            HorizontalAlignment="Right"
+            Margin="10"
+            SelectionChanged="lvEmployees_SelectionChanged"
+            />
+        <Button
+            x:Name="btnRemove"
+            Grid.Column="7"
+            Grid.Row="7"
+            Content="Remove"
+            Width="100"
+            Height="30"
+            Click="btnRemove_Click"/>
+        <Button
+            x:Name="btnShowDetails"
+            Grid.Column="6"
+            Grid.Row="7"            
+            Content="Show Details"
+            
+            Width="100"
+            Height="30"
+            Click="btnShowDetails_Click"/>
+
+    </Grid>
+</Window>
